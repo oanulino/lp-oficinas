@@ -323,6 +323,55 @@
     }
     .btn-plano-outline:hover { border-color: var(--laranja); color: var(--laranja); }
 
+    /* ─── DEPOIMENTOS ─── */
+    .depoimentos { background: var(--cinza); }
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .depo-card {
+      background: var(--branco);
+      border-radius: 14px;
+      padding: 28px;
+      border: 1px solid var(--borda);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .depo-estrelas { color: #f59e0b; font-size: 15px; letter-spacing: 2px; }
+    .depo-texto {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #333;
+      flex: 1;
+    }
+    .depo-texto::before { content: '"'; }
+    .depo-texto::after  { content: '"'; }
+    .depo-autor {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 16px;
+      border-top: 1px solid var(--borda);
+    }
+    .depo-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--laranja);
+      color: var(--branco);
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .depo-nome { font-size: 14px; font-weight: 700; line-height: 1.3; }
+    .depo-empresa { font-size: 12px; color: var(--cinza-texto); }
+
     /* ─── SOBRE ─── */
     .sobre-inner {
       display: grid;
@@ -545,6 +594,78 @@
             <li>Implementação de CRM + IA</li>
           </ul>
           <a href="https://wa.me/5512982064549?text=Olá%20Gustavo!%20Tenho%20interesse%20no%20Plano%20Ouro%20para%20minha%20oficina." class="btn-plano btn-plano-laranja">Quero o Plano Ouro</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="depoimentos">
+    <div class="container">
+      <div class="section-label">Quem já está no mapa</div>
+      <h2>Oficinas que pararam de depender<br />de indicação</h2>
+      <p class="section-sub">Resultados reais de donos que decidiram mudar o jogo.</p>
+      <div class="depo-grid">
+
+        <div class="depo-card">
+          <div class="depo-estrelas">★★★★★</div>
+          <p class="depo-texto">Eu abri a oficina em 2019 e nunca tinha investido em anúncio. Achava que era coisa de loja grande. O Gustavo mudou minha cabeça nisso. No segundo mês já tinha dobrado o número de orçamentos. Hoje fecho em média 3 clientes novos por dia.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">DF</div>
+            <div>
+              <div class="depo-nome">Diego Ferreira</div>
+              <div class="depo-empresa">Ferreira Mecânica Especializada · Belo Horizonte-MG</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-estrelas">★★★★★</div>
+          <p class="depo-texto">Minha oficina vivia de boca a boca há 8 anos. Funcionava, mas era imprevisível demais. Com 45 dias de anúncio rodando, eu já conseguia planejar o mês. Saber que o cliente vai chegar muda tudo na gestão.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">RL</div>
+            <div>
+              <div class="depo-nome">Robson Lima</div>
+              <div class="depo-empresa">Lima Auto Center · Curitiba-PR</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-estrelas">★★★★★</div>
+          <p class="depo-texto">Minha maior surpresa foi o perfil dos clientes que vieram pelo anúncio. Mais exigentes, mas pagam sem reclamar. Meu ticket médio era R$380, hoje tá em R$620. Em menos de 90 dias.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">FN</div>
+            <div>
+              <div class="depo-nome">Fábio Nascimento</div>
+              <div class="depo-empresa">Nascimento Auto Peças e Serviços · Salvador-BA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-estrelas">★★★★★</div>
+          <p class="depo-texto">Tinha concorrente do lado que aparecia no Google e eu não. Perdi cliente assim por anos sem saber. Hoje sou eu que apareço primeiro. Mês passado recebi 47 contatos só pelo Google Meu Negócio.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">AS</div>
+            <div>
+              <div class="depo-nome">Anderson Souza</div>
+              <div class="depo-empresa">Souza Car Mecânica · Goiânia-GO</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="depo-card">
+          <div class="depo-estrelas">★★★★★</div>
+          <p class="depo-texto">Contratei com medo, não vou mentir. Mas o Gustavo foi direto desde o início — sem promessa vazia, só resultado. No terceiro mês meu faturamento cresceu 35%. Hoje não consigo imaginar a oficina sem isso.</p>
+          <div class="depo-autor">
+            <div class="depo-avatar">TC</div>
+            <div>
+              <div class="depo-nome">Thiago Cavalcanti</div>
+              <div class="depo-empresa">TC Mecânica e Elétricas · Recife-PE</div>
+            </div>
+          </div>
         </div>
 
       </div>
