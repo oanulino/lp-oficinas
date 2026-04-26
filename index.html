@@ -86,6 +86,31 @@
       max-width: 560px;
       margin: 0 auto 36px;
     }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 36px;
+      flex-wrap: wrap;
+    }
+    .hero-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+    .stat-numero {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--laranja);
+    }
+    .stat-label {
+      font-size: 12px;
+      color: #888;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
     .btn-hero {
       display: inline-flex;
       align-items: center;
@@ -146,7 +171,24 @@
       border: 1px solid var(--borda);
     }
     .dor-icon { font-size: 28px; margin-bottom: 12px; }
-    .dor-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+    .dor-card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dor-badge {
+      display: inline-block;
+      background: var(--laranja);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
     .dor-card p { font-size: 14px; color: var(--cinza-texto); }
 
     /* ─── MÉTODO ADF ─── */
@@ -178,6 +220,16 @@
       position: absolute;
       top: 16px; right: 20px;
       line-height: 1;
+    }
+    .adf-fase {
+      display: inline-block;
+      background: var(--laranja);
+      color: var(--branco);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
     }
     .adf-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
     .adf-card p { font-size: 14px; color: var(--cinza-texto); line-height: 1.7; }
@@ -372,6 +424,20 @@
     <div class="hero-badge">Para donos de oficina mecânica</div>
     <h1>Chega de depender de<br /><span>indicação para lotar sua oficina</span></h1>
     <p>Atraia clientes todo mês com tráfego pago — sem contratar vendedor, sem sorte, sem esperar.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-numero">+50</span>
+        <span class="stat-label">clientes atendidos</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-numero">3 anos</span>
+        <span class="stat-label">de experiência</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-numero">90 dias</span>
+        <span class="stat-label">para resultado</span>
+      </div>
+    </div>
     <a href="https://wa.me/5512982064549?text=Olá%20Gustavo!%20Quero%20parar%20de%20depender%20de%20indicação%20e%20ter%20mais%20clientes%20na%20minha%20oficina." class="btn-hero">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.09.535 4.06 1.474 5.771L.013 23.25l5.62-1.449A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.89 0-3.66-.5-5.19-1.38l-.37-.22-3.34.86.89-3.24-.24-.38A9.948 9.948 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
       Quero mais clientes agora
@@ -388,22 +454,22 @@
       <div class="dor-grid">
         <div class="dor-card">
           <div class="dor-icon">😓</div>
-          <h3>Dependência de indicação</h3>
+          <h3>Dependência de indicação <span class="dor-badge">78%</span></h3>
           <p>Mês bom, mês ruim. O movimento varia porque você não controla de onde os clientes vêm.</p>
         </div>
         <div class="dor-card">
           <div class="dor-icon">📉</div>
-          <h3>Fluxo irregular na oficina</h3>
+          <h3>Fluxo irregular na oficina <span class="dor-badge">-63%</span></h3>
           <p>Semanas cheias e semanas vazias. Sem previsibilidade, fica difícil crescer ou contratar.</p>
         </div>
         <div class="dor-card">
           <div class="dor-icon">🗺️</div>
-          <h3>Invisível na região</h3>
+          <h3>Invisível na região <span class="dor-badge">90%</span></h3>
           <p>Quem está buscando mecânico perto de você no Google não te encontra — e vai para o concorrente.</p>
         </div>
         <div class="dor-card">
           <div class="dor-icon">💸</div>
-          <h3>Ticket médio baixo</h3>
+          <h3>Ticket médio baixo <span class="dor-badge">-45%</span></h3>
           <p>Os clientes que chegam por indicação pedem desconto. Os certos — que pagam bem — você não está atraindo.</p>
         </div>
       </div>
@@ -419,16 +485,19 @@
       <div class="adf-grid">
         <div class="adf-card">
           <div class="adf-letra">A</div>
+          <div class="adf-fase">Fase 1</div>
           <h3>Atração</h3>
           <p>Anúncios no Meta e Google que aparecem para quem está procurando mecânico na sua cidade — na hora certa, no lugar certo.</p>
         </div>
         <div class="adf-card">
           <div class="adf-letra">D</div>
+          <div class="adf-fase">Fase 2</div>
           <h3>Decisão</h3>
           <p>Criativos, roteiros e social media que constroem autoridade. O cliente já chega convencido antes de ligar.</p>
         </div>
         <div class="adf-card">
           <div class="adf-letra">F</div>
+          <div class="adf-fase">Fase 3</div>
           <h3>Faturar</h3>
           <p>Script de atendimento, relatórios e otimização contínua para converter mais e aumentar o ticket médio.</p>
         </div>
